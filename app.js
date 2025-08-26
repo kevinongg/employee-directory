@@ -15,8 +15,8 @@ app.route("/employees").get((req, res) => {
 app.route("/employees/random/").get((req, res) => {
   const { id } = req.params;
   const randomIndex = Math.floor(Math.random() * employees.length);
-  const employee = employees[randomIndex];
-  res.send(employee);
+  const randomEmployee = employees[randomIndex];
+  res.send(randomEmployee);
 });
 
 app.route("/employees/:id").get((req, res) => {
